@@ -9,6 +9,16 @@
 import UIKit
 
 class ArticlePageViewController: UIViewController {
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    
+    var article: Articles?
+    
+    // MARK: - lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()

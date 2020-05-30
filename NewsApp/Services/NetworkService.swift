@@ -15,7 +15,7 @@ enum ServerError: Error {
 
 class NetworkService {
     
-    func loadNews(onComplete: @escaping ([Articles]?) -> Void, onError: @escaping (Error) -> Void) {
+    func loadArticles(onComplete: @escaping ([Articles]) -> Void, onError: @escaping (Error) -> Void) {
         
         let urlString = NetworkConstants.baseUrl + NetworkConstants.apikey
         
@@ -30,7 +30,6 @@ class NetworkService {
             guard let data = data else {
                 DispatchQueue.main.async {
                     onError(ServerError.noDataProvided)
-                    
                 }
                 return
             }

@@ -17,15 +17,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="393" height="137"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-Xo-v48">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-Xo-v48">
                         <rect key="frame" x="10" y="10" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="C0I-FW-PLl"/>
                             <constraint firstAttribute="width" constant="100" id="eol-Xp-Wsy"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbA-IS-T2J">
-                        <rect key="frame" x="120" y="10" width="263" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbA-IS-T2J">
+                        <rect key="frame" x="120" y="10" width="263" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-bD-lpK">
+                        <rect key="frame" x="120" y="89" width="263" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,9 +40,12 @@
                 <constraints>
                     <constraint firstItem="QbA-IS-T2J" firstAttribute="leading" secondItem="Pba-Xo-v48" secondAttribute="trailing" constant="10" id="5KY-Ex-X3A"/>
                     <constraint firstItem="QbA-IS-T2J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9TP-sB-4lQ"/>
+                    <constraint firstItem="pqQ-bD-lpK" firstAttribute="leading" secondItem="Pba-Xo-v48" secondAttribute="trailing" constant="10" id="IjA-Ku-fmX"/>
                     <constraint firstItem="Pba-Xo-v48" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="JKQ-Br-l70"/>
                     <constraint firstAttribute="bottom" secondItem="Pba-Xo-v48" secondAttribute="bottom" constant="10" id="NWX-nR-4UN"/>
+                    <constraint firstAttribute="bottom" secondItem="pqQ-bD-lpK" secondAttribute="bottom" constant="10" id="bRa-Pg-aNu"/>
                     <constraint firstAttribute="trailing" secondItem="QbA-IS-T2J" secondAttribute="trailing" constant="10" id="mpz-Hh-aew"/>
+                    <constraint firstAttribute="trailing" secondItem="pqQ-bD-lpK" secondAttribute="trailing" constant="10" id="vHa-R9-UCU"/>
                     <constraint firstItem="Pba-Xo-v48" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wSb-iy-uHR"/>
                 </constraints>
             </tableViewCellContentView>
@@ -44,6 +53,7 @@
             <connections>
                 <outlet property="articleImage" destination="Pba-Xo-v48" id="ndI-Ue-nFk"/>
                 <outlet property="articleTitle" destination="QbA-IS-T2J" id="P12-BO-On7"/>
+                <outlet property="dateLabel" destination="pqQ-bD-lpK" id="S5S-lp-P2l"/>
             </connections>
             <point key="canvasLocation" x="190.57971014492756" y="67.96875"/>
         </tableViewCell>

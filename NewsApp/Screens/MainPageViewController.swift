@@ -22,12 +22,28 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = "TechNews"
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.separatorStyle = .none
+        //tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "ArticlesTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        loadNews()
     }
+    
+    //MARK: - Methods
+
+    func loadNews() {
+        let service = NetworkService()
+        
+        service.loadArticles(onComplete: { [weak self] (articles) in
+            self?.articles = articles
+            self?.tableView.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
 }
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
@@ -38,8 +54,7 @@ extension MainPageViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? ArticlesTableViewCell else { return UITableViewCell() }
-        //let article = articles[indexPath.row]
-        //let cellState = ArticlesTableViewCell.State(title: article.title, urlToImage: article.urlToImage)
+        cell.configure(with: articles[indexPath.row])
         return cell
     }
     
@@ -54,13 +69,13 @@ extension MainPageViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
-// MARK: - Extension
+// MARK: - Extensions
 
-/*extension MainPageViewController {
-
-func push(with character: Articles) {
-    let articleInfoVC = ArticlePageViewController(nibName: "ArticlePageViewController", bundle: nil)
-    articleInfoVC.articles = articles
-    navigationController?.pushViewController(articleInfoVC, animated: true)
-    }
-}*/
+//extension MainPageViewController {
+//
+//func push(with articles: Articles) {
+//    let articleInfoVC = ArticlePageViewController(nibName: "ArticlePageViewController", bundle: nil)
+//    articleInfoVC.articles = articles
+//    navigationController?.pushViewController(articleInfoVC, animated: true)
+//    }
+//}

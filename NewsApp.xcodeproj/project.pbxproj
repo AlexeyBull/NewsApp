@@ -20,6 +20,7 @@
 		844DF8C72481259200BFAA87 /* ArticlesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844DF8C52481259200BFAA87 /* ArticlesTableViewCell.xib */; };
 		844DF8CA2481323000BFAA87 /* ArticlePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DF8C82481323000BFAA87 /* ArticlePageViewController.swift */; };
 		844DF8CB2481323000BFAA87 /* ArticlePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844DF8C92481323000BFAA87 /* ArticlePageViewController.xib */; };
+		844DF8CF248239AF00BFAA87 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DF8CE248239AF00BFAA87 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		844DF8C52481259200BFAA87 /* ArticlesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ArticlesTableViewCell.xib; path = NewsApp/Models/ArticlesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		844DF8C82481323000BFAA87 /* ArticlePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArticlePageViewController.swift; path = NewsApp/Models/ArticlePageViewController.swift; sourceTree = SOURCE_ROOT; };
 		844DF8C92481323000BFAA87 /* ArticlePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ArticlePageViewController.xib; path = NewsApp/Models/ArticlePageViewController.xib; sourceTree = SOURCE_ROOT; };
+		844DF8CE248239AF00BFAA87 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				844DF89624810B9800BFAA87 /* AppDelegate.swift */,
 				844DF8A124810B9C00BFAA87 /* LaunchScreen.storyboard */,
+				844DF8CC2482396C00BFAA87 /* Library */,
 				844DF8B62481120300BFAA87 /* Models */,
 				844DF8AF2481108100BFAA87 /* Screens */,
 				844DF8AE2481106A00BFAA87 /* Services */,
@@ -152,6 +155,22 @@
 			path = ArticlePage;
 			sourceTree = "<group>";
 		};
+		844DF8CC2482396C00BFAA87 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				844DF8CD2482397900BFAA87 /* Extensions */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		844DF8CD2482397900BFAA87 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				844DF8CE248239AF00BFAA87 /* UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844DF8C62481259200BFAA87 /* ArticlesTableViewCell.swift in Sources */,
+				844DF8CF248239AF00BFAA87 /* UIImageView.swift in Sources */,
 				844DF8B4248111CE00BFAA87 /* MainPageViewController.swift in Sources */,
 				844DF8CA2481323000BFAA87 /* ArticlePageViewController.swift in Sources */,
 				844DF8B82481123100BFAA87 /* Articles.swift in Sources */,

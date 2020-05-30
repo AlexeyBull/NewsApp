@@ -10,22 +10,19 @@ import UIKit
 
 class ArticlesTableViewCell: UITableViewCell {
     
-    // MARK: - Additional struct
-    
-    struct State {
-        var title: String?
-        var urlToImage: String?
-    }
-    
     //MARK: - IBOutlets
     
     @IBOutlet weak var articleImage: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
-    //MARK: -
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+    
+    //MARK: - Internal methods
+    
+    func configure(with article: Articles) {
+        articleTitle.text = article.title
+        articleImage.loadImage(by: article.urlToImage!)
+        articleImage.layer.cornerRadius = 15
+        dateLabel.text = article.publishedAt
     }
 }
