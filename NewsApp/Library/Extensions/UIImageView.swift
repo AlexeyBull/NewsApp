@@ -27,11 +27,8 @@ extension UIImageView {
                     cache.storeCachedResponse(cacheRepsonse, for: request)
                     self.image = UIImage(data: data)
                 }
-                
             }.resume()
         }
-        
     }
-    
 }
 
