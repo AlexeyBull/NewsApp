@@ -26,7 +26,6 @@ class MainPageViewController: UIViewController {
         self.title = "TechNews"
         tableView.dataSource = self
         tableView.delegate = self
-        //tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "ArticlesTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         loadNews()
     }
@@ -43,7 +42,6 @@ class MainPageViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-    
 }
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
@@ -58,10 +56,10 @@ extension MainPageViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    /* func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         push(with: articles[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
-    }*/
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120.0
@@ -69,13 +67,13 @@ extension MainPageViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
-// MARK: - Extensions
+//MARK: - Extensions
 
-//extension MainPageViewController {
-//
-//func push(with articles: Articles) {
-//    let articleInfoVC = ArticlePageViewController(nibName: "ArticlePageViewController", bundle: nil)
-//    articleInfoVC.articles = articles
-//    navigationController?.pushViewController(articleInfoVC, animated: true)
-//    }
-//}
+extension MainPageViewController {
+    
+    func push(with articles: Articles) {
+        let articleInfoVC = ArticlePageViewController(nibName: "ArticlePageViewController", bundle: nil)
+        articleInfoVC.article = articles
+        navigationController?.pushViewController(articleInfoVC, animated: true)
+    }
+}

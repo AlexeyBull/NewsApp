@@ -21,7 +21,11 @@ class ArticlesTableViewCell: UITableViewCell {
     
     func configure(with article: Articles) {
         articleTitle.text = article.title
-        articleImage.loadImage(by: article.urlToImage!)
+        if article.urlToImage != nil {
+            articleImage.loadImage(by: article.urlToImage!)
+        } else {
+            articleImage.image = UIImage(named: "logo")
+        }
         articleImage.layer.cornerRadius = 15
         dateLabel.text = article.publishedAt
     }

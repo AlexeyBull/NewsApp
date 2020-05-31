@@ -21,6 +21,12 @@
 		844DF8CB2481323000BFAA87 /* ArticlePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844DF8C92481323000BFAA87 /* ArticlePageViewController.xib */; };
 		844DF8CF248239AF00BFAA87 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DF8CE248239AF00BFAA87 /* UIImageView.swift */; };
 		844DF8D32482822100BFAA87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DF8D22482822100BFAA87 /* Assets.xcassets */; };
+		844DF8D7248296D500BFAA87 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DF8D5248296D500BFAA87 /* ImageTableViewCell.swift */; };
+		844DF8D8248296D500BFAA87 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844DF8D6248296D500BFAA87 /* ImageTableViewCell.xib */; };
+		844DF8DB2482DCBD00BFAA87 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DF8D92482DCBD00BFAA87 /* TitleTableViewCell.swift */; };
+		844DF8DC2482DCBD00BFAA87 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844DF8DA2482DCBD00BFAA87 /* TitleTableViewCell.xib */; };
+		844DF8DF2482E29400BFAA87 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DF8DD2482E29400BFAA87 /* DescriptionTableViewCell.swift */; };
+		844DF8E02482E29400BFAA87 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844DF8DE2482E29400BFAA87 /* DescriptionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		844DF8C92481323000BFAA87 /* ArticlePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ArticlePageViewController.xib; path = NewsApp/Models/ArticlePageViewController.xib; sourceTree = SOURCE_ROOT; };
 		844DF8CE248239AF00BFAA87 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		844DF8D22482822100BFAA87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		844DF8D5248296D500BFAA87 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		844DF8D6248296D500BFAA87 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		844DF8D92482DCBD00BFAA87 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		844DF8DA2482DCBD00BFAA87 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
+		844DF8DD2482E29400BFAA87 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		844DF8DE2482E29400BFAA87 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +161,7 @@
 		844DF8BF24811E7300BFAA87 /* ArticlePage */ = {
 			isa = PBXGroup;
 			children = (
+				844DF8D42482966500BFAA87 /* Cells */,
 				844DF8C82481323000BFAA87 /* ArticlePageViewController.swift */,
 				844DF8C92481323000BFAA87 /* ArticlePageViewController.xib */,
 			);
@@ -169,6 +182,19 @@
 				844DF8CE248239AF00BFAA87 /* UIImageView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		844DF8D42482966500BFAA87 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				844DF8D92482DCBD00BFAA87 /* TitleTableViewCell.swift */,
+				844DF8DA2482DCBD00BFAA87 /* TitleTableViewCell.xib */,
+				844DF8D5248296D500BFAA87 /* ImageTableViewCell.swift */,
+				844DF8D6248296D500BFAA87 /* ImageTableViewCell.xib */,
+				844DF8DD2482E29400BFAA87 /* DescriptionTableViewCell.swift */,
+				844DF8DE2482E29400BFAA87 /* DescriptionTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +258,9 @@
 				844DF8C72481259200BFAA87 /* ArticlesTableViewCell.xib in Resources */,
 				844DF8CB2481323000BFAA87 /* ArticlePageViewController.xib in Resources */,
 				844DF8A324810B9C00BFAA87 /* LaunchScreen.storyboard in Resources */,
+				844DF8D8248296D500BFAA87 /* ImageTableViewCell.xib in Resources */,
+				844DF8E02482E29400BFAA87 /* DescriptionTableViewCell.xib in Resources */,
+				844DF8DC2482DCBD00BFAA87 /* TitleTableViewCell.xib in Resources */,
 				844DF8B5248111CE00BFAA87 /* MainPageViewController.xib in Resources */,
 				844DF8D32482822100BFAA87 /* Assets.xcassets in Resources */,
 			);
@@ -247,10 +276,13 @@
 				844DF8C62481259200BFAA87 /* ArticlesTableViewCell.swift in Sources */,
 				844DF8CF248239AF00BFAA87 /* UIImageView.swift in Sources */,
 				844DF8B4248111CE00BFAA87 /* MainPageViewController.swift in Sources */,
+				844DF8DB2482DCBD00BFAA87 /* TitleTableViewCell.swift in Sources */,
+				844DF8DF2482E29400BFAA87 /* DescriptionTableViewCell.swift in Sources */,
 				844DF8CA2481323000BFAA87 /* ArticlePageViewController.swift in Sources */,
 				844DF8B82481123100BFAA87 /* Articles.swift in Sources */,
 				844DF8BA2481129600BFAA87 /* TechNews.swift in Sources */,
 				844DF8AD24810DE200BFAA87 /* NetworkConstants.swift in Sources */,
+				844DF8D7248296D500BFAA87 /* ImageTableViewCell.swift in Sources */,
 				844DF8B1248110FF00BFAA87 /* NetworkService.swift in Sources */,
 				844DF89724810B9800BFAA87 /* AppDelegate.swift in Sources */,
 			);
