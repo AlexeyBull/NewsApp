@@ -34,7 +34,10 @@ class MainPageViewController: UIViewController {
     //MARK: - Methods
 
     func loadNews() {
-        
+        service.loadCache(onComplete: { [weak self] (articles) in
+            self?.articles = articles
+            self?.tableView.reloadData()
+        })
         service.loadArticles(onComplete: { [weak self] (articles) in
             self?.articles = articles
             self?.tableView.reloadData()
