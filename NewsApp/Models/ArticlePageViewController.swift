@@ -47,6 +47,7 @@ extension ArticlePageViewController: UITableViewDataSource, UITableViewDelegate 
             return cell
         } else if indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "image", for: indexPath) as? ImageTableViewCell else { return UITableViewCell() }
+            cell.articleImage.loadImage(by: (article?.urlToImage)!)
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "description", for: indexPath) as? DescriptionTableViewCell else { return UITableViewCell() }
