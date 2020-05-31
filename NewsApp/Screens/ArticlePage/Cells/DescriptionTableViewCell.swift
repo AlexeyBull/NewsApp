@@ -10,8 +10,8 @@ import UIKit
 
 class DescriptionTableViewCell: UITableViewCell {
     
-    // MARK: - IBOutlets
+    //MARK: - IBOutlets
     
     @IBOutlet weak var descriptionLabel: UILabel!
-
+    
 }

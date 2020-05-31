@@ -9,9 +9,8 @@
 import UIKit
 
 class ImageTableViewCell: UITableViewCell {
-    
 
-    // MARK: - IBOutlets
+    //MARK: - IBOutlets
     
     @IBOutlet weak var articleImage: UIImageView!
 

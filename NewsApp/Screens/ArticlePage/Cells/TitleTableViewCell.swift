@@ -9,8 +9,8 @@
 import UIKit
 
 class TitleTableViewCell: UITableViewCell {
-    
-    // MARK: - IBOutlets
+
+    //MARK: - IBOutlets
     
     @IBOutlet weak var titleLabel: UILabel!
     

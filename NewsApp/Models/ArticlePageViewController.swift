@@ -41,12 +41,16 @@ extension ArticlePageViewController: UITableViewDataSource, UITableViewDelegate 
         
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as? TitleTableViewCell else { return UITableViewCell() }
+            cell.titleLabel.text = article?.title
+            cell.titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+
             return cell
         } else if indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "image", for: indexPath) as? ImageTableViewCell else { return UITableViewCell() }
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "description", for: indexPath) as? DescriptionTableViewCell else { return UITableViewCell() }
+            cell.descriptionLabel.text = article?.description
             return cell
         }
     }

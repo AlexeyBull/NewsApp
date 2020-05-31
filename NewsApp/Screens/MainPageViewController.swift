@@ -17,6 +17,7 @@ class MainPageViewController: UIViewController {
     // MARK: - Properties
     
     var articles = [Articles]()
+    let service = DataProvider()
     
     // MARK: - Lifecycle
     
@@ -33,7 +34,6 @@ class MainPageViewController: UIViewController {
     //MARK: - Methods
 
     func loadNews() {
-        let service = NetworkService()
         
         service.loadArticles(onComplete: { [weak self] (articles) in
             self?.articles = articles
