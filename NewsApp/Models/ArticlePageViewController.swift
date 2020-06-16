@@ -43,7 +43,6 @@ extension ArticlePageViewController: UITableViewDataSource, UITableViewDelegate 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as? TitleTableViewCell else { return UITableViewCell() }
             cell.titleLabel.text = article?.title
             cell.titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-
             return cell
         } else if indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "image", for: indexPath) as? ImageTableViewCell else { return UITableViewCell() }
@@ -60,7 +59,6 @@ extension ArticlePageViewController: UITableViewDataSource, UITableViewDelegate 
         return UITableView.automaticDimension
     }
 }
-
 // MARK: - Extensions
 
 extension ArticlePageViewController {

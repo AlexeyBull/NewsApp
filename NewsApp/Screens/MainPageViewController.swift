@@ -31,7 +31,7 @@ class MainPageViewController: UIViewController {
         loadNews()
     }
     
-    //MARK: - Methods
+    // MARK: - Methods
 
     func loadNews() {
         service.loadCache(onComplete: { [weak self] (articles) in
@@ -67,10 +67,8 @@ extension MainPageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120.0
     }
-    
 }
-
-//MARK: - Extensions
+// MARK: - Extensions
 
 extension MainPageViewController {
     

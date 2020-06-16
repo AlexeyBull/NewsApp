@@ -10,14 +10,13 @@ import UIKit
 
 class ArticlesTableViewCell: UITableViewCell {
     
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     
     @IBOutlet weak var articleImage: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    
-    //MARK: - Internal methods
+    // MARK: - Internal methods
     
     func configure(with article: Articles) {
         articleTitle.text = article.title
